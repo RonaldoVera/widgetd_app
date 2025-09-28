@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_app/menu/menu_items.dart';
-import 'package:widgets_app/presentation/screens/busttons/buttons_screen.dart';
 
 void main() => runApp(const HomeScreen());
 
@@ -47,7 +47,9 @@ class _CustomeListTile extends StatelessWidget {
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
       onTap: () {
-        Navigator.pushNamed(context, menuItem.link);
+        // Navigator.push(context, MaterialPageRoute(builder: (context) => const ButtonsScreen()));
+        // Navigator.pushNamed(context, menuItem.link);
+        context.push(menuItem.link);
       },
     );
   }
